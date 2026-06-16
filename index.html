@@ -162,7 +162,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.07em;
     }
 
     .hero p {
@@ -808,12 +808,6 @@
         <p>Lindsay grew up in Hawaiʻi before making the bold move to Las Vegas at 22 — not to visit, but to chase a dream. For the past <strong>13 years</strong>, she has been a full-time professional poker player while also finishing her PhD.</p>
         <p>Her regular limit is <strong>$2/5 No-Limit Hold'em</strong>, but she has tested herself at stakes as high as <strong>$100/200/200 NLH</strong>. Over the years, she has split her time between the cash game grind and the tournament circuit. She has also had the privilege of traveling the world and playing in different countries and cities.</p>
         <p>Right now, she is locked in on cash games exclusively — and the <strong>$1/3 Challenge</strong> is her latest mission. The goal is $10,000 in profit from the ground up. Next up? She will be doing a $2/5 challenge, a $5/10 challenge, and a $10/20 challenge.</p>
-        <div class="bio-stats">
-          <div class="bio-stat">
-            <span class="bio-stat-value">13</span>
-            <span class="bio-stat-label">Years as a Pro</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -836,20 +830,7 @@
           </a>
         </div>
       </div>
-      <div class="connect-card">
-        <div class="card-glow glow-blue"></div>
-        <div class="connect-card-icon">📬</div>
-        <h3>Stay in the Loop</h3>
-        <p>Subscribe to get notified when I post a new session update or hit a major milestone.</p>
-        <form id="email-form">
-          <div class="email-input-row">
-            <input type="email" placeholder="your@email.com" id="email-input" required />
-            <button type="submit">Subscribe</button>
-          </div>
-          <p class="email-disclaimer">No spam. Just poker updates.</p>
-        </form>
-      </div>
-    </div>
+        </div>
   </section>
 
   <section class="about-section" id="about">
@@ -948,7 +929,7 @@
     function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2800); }
 
     function shareChallenge() {
-      const d = { title: '$1/$3 Poker Challenge — Road to $10,000', text: 'Follow my poker grind from $1/$3 to $10,000 in profit!', url: window.location.href };
+      const d = { title: '$1/3 Poker Challenge — Road to $10,000', text: 'Follow my poker grind from $1/3 to $10,000 in profit!', url: window.location.href };
       if (navigator.share) { navigator.share(d).catch(() => {}); }
       else { navigator.clipboard.writeText(window.location.href).then(() => showToast('✅ Link copied to clipboard!')).catch(() => showToast('🔗 ' + window.location.href)); }
     }
@@ -957,7 +938,7 @@
       e.preventDefault();
       const email = document.getElementById('email-input').value.trim();
       if (!email) return;
-      window.location.href = 'mailto:malukido808@gmail.com?subject=' + encodeURIComponent('Subscribe me to $1/$3 Poker Challenge updates') + '&body=' + encodeURIComponent('Hey! Please add ' + email + ' to your update list.');
+      window.location.href = 'mailto:malukido808@gmail.com?subject=' + encodeURIComponent('Subscribe me to $1/3 Poker Challenge updates') + '&body=' + encodeURIComponent('Hey! Please add ' + email + ' to your update list.');
       this.innerHTML = '<div style="background:#f0fdf9;border:1.5px solid #00c896;border-radius:14px;padding:14px 18px;font-size:.88rem;font-weight:600;color:#065f46;">✅ Thanks! Your email app should open — just hit send.</div>';
     });
   </script>
